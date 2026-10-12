@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura & Wax | Artisanal Hand-Poured Candles</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        ✨ Complimentary Shipping on All Orders Over $75 | Hand-Crafted Coconut Soy Wax
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">AURA & WAX</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#shop">Collection</a></li>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartToggleBtn">
+                    <span>Bag</span>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <span class="hero-subtitle">Handmade in Small Batches</span>
+            <h1>Illuminate Your Mind & Space</h1>
+            <p>Sustainably harvested coconut-soy wax infused with premium botanical essential oils, crafted to elevate your daily ritual.</p>
+            <a href="#shop" class="btn btn-primary">Explore The Collection</a>
+        </div>
+    </section>
+
+    <!-- Filter & Shop Section -->
+    <section class="shop-section" id="shop">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Signature Collection</h2>
+                <p>Discover carefully balanced fragrance notes designed for serenity, focus, and warmth.</p>
+            </div>
+
+            <div class="filter-bar">
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">All Fragrances</button>
+                    <button class="filter-btn" data-category="Woody">Woody & Earthy</button>
+                    <button class="filter-btn" data-category="Floral">Floral & Fresh</button>
+                    <button class="filter-btn" data-category="Warm">Warm & Citrus</button>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search fragrances...">
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Story / Brand Section -->
+    <section class="about-section" id="about">
+        <div class="container about-grid">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80&w=800" alt="Candle Crafting Process">
+            </div>
+            <div class="about-text">
+                <span class="hero-subtitle">Pure & Mindful</span>
+                <h2>Crafted with Intent</h2>
+                <p>Every Aura & Wax candle is hand-poured using 100% renewable coconut-soy wax, clean-burning cotton wicks, and phthalate-free fine fragrance oils. We never use parabens, synthetic dyes, or petroleum paraffin.</p>
+                <p>Our vessels are designed to be repurposed in your home as planters, pencil cups, or trinket jars long after the flame has gone out.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer-grid">
+            <div>
+                <h3>AURA & WAX</h3>
+                <p>Bringing warmth, light, and elevated scent stories into conscious homes worldwide.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#shop">Shop All</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#">Care Guide</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Newsletter</h4>
+                <p>Subscribe for exclusive releases and scent rituals.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button class="btn btn-primary">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aura & Wax Candle Co. All Rights Reserved. Created for practice & portfolio demonstration.</p>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModalBtn">&times;</button>
+            <div class="modal-grid" id="modalGrid">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Shopping Bag</h3>
+            <button class="close-modal" id="closeCartBtn">&times;</button>
+        </div>
+
+        <div class="shipping-progress">
+            <p id="shippingText">Add items to unlock Free Shipping!</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="shippingProgress"></div>
+            </div>
+        </div>
+
+        <div class="cart-items" id="cartItemsContainer">
+            <!-- Dynamically populated by JS -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="subtotal-row">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <p class="tax-note">Taxes and shipping calculated at checkout.</p>
+            <button class="btn btn-primary checkout-btn" onclick="alert('Checkout integration simulated! Thank you for testing Aura & Wax.')">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
